@@ -1,0 +1,66 @@
+.rating-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-dim);
+}
+
+.rating-wrap {
+  max-width: 560px;
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.rating-sub {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 8px 0 24px;
+}
+
+.rating-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--line);
+  padding: 0 2px;
+  transition: color 0.12s ease, transform 0.12s ease;
+}
+
+.star.filled {
+  color: #F2A93B;
+  transform: scale(1.05);
+}
+
+.rating-comment {
+  width: 100%;
+  max-width: 420px;
+  font-family: var(--body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.rating-summary {
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
