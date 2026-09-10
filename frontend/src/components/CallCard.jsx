@@ -16,7 +16,7 @@ export default function CallCard() {
       {/* top bar */}
       <g fontFamily="IBM Plex Mono, monospace" fontSize="12" fill="#9296A6">
         <text x="32" y="70">INBOUND CALL</text>
-        <circle className="cc-blink" cx="500" cy="65" r="4" fill="#00C2A8" />
+        <circle className="animate-pulse" cx="500" cy="65" r="4" fill="#00C2A8" />
         <text x="512" y="70" fill="#00C2A8">LIVE</text>
       </g>
       <line x1="32" y1="86" x2="528" y2="86" stroke="rgba(245,243,238,0.12)" />
@@ -40,6 +40,7 @@ export default function CallCard() {
               height={h}
               rx="2"
               fill="url(#cc-grad)"
+              className="animate-[pulse_1.5s_ease-in-out_infinite]"
               style={{ animationDelay: `${(i % 6) * 0.11}s` }}
             />
           )

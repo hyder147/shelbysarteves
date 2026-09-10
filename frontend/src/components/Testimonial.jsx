@@ -1,32 +1,30 @@
-import Reveal from './Reveal'
+import Reveal from './Reveal';
+import SectionHeader from './SectionHeader';
 
 export default function Testimonial() {
   return (
-    <section style={styles.section}>
-      <div className="wrap">
-        <Reveal>
-          <div className="kicker">SAMPLE, REPLACE WITH A REAL CUSTOMER QUOTE</div>
-          <blockquote style={styles.quote}>
-            "We used to lose weekend calls to voicemail. Now every one of them turns into
-            either a booked job or a clear reason why not, and I see all of it the next morning."
-          </blockquote>
-          <div style={styles.attribution}>Placeholder attribution, owner, placeholder HVAC company</div>
-        </Reveal>
+    <section className="relative z-10 border-b border-line py-24">
+      <div className="wrap relative">
+        <div className="w-[80%] md:w-1/2">
+          <SectionHeader
+            kicker="SAMPLE, REPLACE WITH A REAL CUSTOMER QUOTE"
+            title={<span className="font-medium text-[clamp(22px,3vw,30px)] leading-[1.3] m-0 max-w-[30ch] tracking-[-0.01em]">&quot;We used to lose weekend calls to voicemail. Now every one of them turns into either a booked job or a clear reason why not, and I see all of it the next morning.&quot;</span>}
+          />
+          <Reveal>
+            <div className="font-mono text-[13px] text-muted -mt-7">
+              Placeholder attribution, owner, placeholder HVAC company
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="absolute top-[5px] right-0 w-[42%] h-[calc(100%+260px)] z-10 hidden md:block">
+          <img
+            src="/imagesForNavbar/human.png"
+            alt="Customer success dashboard"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
       </div>
     </section>
-  )
-}
-
-const styles = {
-  section: { borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' },
-  quote: {
-    fontFamily: 'var(--display)',
-    fontWeight: 500,
-    fontSize: 'clamp(22px, 3vw, 30px)',
-    lineHeight: 1.3,
-    margin: '0 0 18px',
-    maxWidth: '30ch',
-    letterSpacing: '-0.01em',
-  },
-  attribution: { fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--muted)' },
+  );
 }
